@@ -1,0 +1,76 @@
+{
+  "name": "cost-secure-job-clusters",
+  "definition": {
+    "autotermination_minutes": {
+      "type": "fixed",
+      "value": 15
+    },
+    "cluster_type": {
+      "type": "fixed",
+      "value": "job"
+    },
+    "node_type_id": {
+      "type": "allowlist",
+      "values": [
+        "m5.xlarge",
+        "m5.2xlarge",
+        "m6i.xlarge",
+        "m6i.2xlarge"
+      ]
+    },
+    "driver_node_type_id": {
+      "type": "allowlist",
+      "values": [
+        "m5.xlarge",
+        "m5.2xlarge",
+        "m6i.xlarge",
+        "m6i.2xlarge"
+      ]
+    },
+    "instance_pool_id": {
+      "type": "allowlist",
+      "values": [
+        "__REPLACE_WITH_POOL_ID__"
+      ]
+    },
+    "driver_instance_pool_id": {
+      "type": "allowlist",
+      "values": [
+        "__REPLACE_WITH_POOL_ID__"
+      ]
+    },
+    "num_workers": {
+      "type": "range",
+      "minValue": 1,
+      "maxValue": 8
+    },
+    "spark_version": {
+      "type": "regex",
+      "pattern": "^(.*LTS.*)$"
+    },
+    "enable_elastic_disk": {
+      "type": "fixed",
+      "value": true
+    },
+    "aws_attributes.instance_profile_arn": {
+      "type": "fixed",
+      "value": "__REPLACE_WITH_INSTANCE_PROFILE_ARN__"
+    },
+    "single_user_name": {
+      "type": "unlimited",
+      "hidden": true
+    },
+    "spark_conf.spark.databricks.cluster.profile": {
+      "type": "fixed",
+      "value": "serverless"
+    },
+    "spark_conf.spark.databricks.repl.allowedLanguages": {
+      "type": "fixed",
+      "value": "python"
+    },
+    "custom_tags.Project": {
+      "type": "fixed",
+      "value": "data-landing"
+    }
+  }
+}
