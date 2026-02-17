@@ -1,0 +1,11 @@
+{
+  "instance_pool_name": "spot-pool-small",
+  "node_type_id": "m6i.xlarge",
+  "min_idle_instances": 0,
+  "max_capacity": 20,
+  "idle_instance_autotermination_minutes": 15,
+  "aws_attributes": {
+    "availability": "SPOT_WITH_FALLBACK",
+    "spot_bid_price_percent": 100
+  }
+}
