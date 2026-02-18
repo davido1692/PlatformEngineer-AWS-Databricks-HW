@@ -16,7 +16,7 @@ def to_float(value):
 
 
 def read_rows(path):
-    # The file is tab-delimited even though the extension is .csv.
+    # This argument will consider all files regardless of type
     # Normalize headers to avoid trailing whitespace causing "UNKNOWN" buckets.
     with path.open("r", encoding="utf-8") as handle:
         first_line = handle.readline()
