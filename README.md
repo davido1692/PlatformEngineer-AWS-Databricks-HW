@@ -16,7 +16,7 @@ This repo contains four sections: Infrastructure (Terraform), Databricks pipelin
 cd infra
 terraform init
 terraform validate
-terraform plan -no-color -var-file=terraform.tfvars
+terraform plan -no-color -var-file="terraform.tfvars"
 ```
 
 ### Pipelines (Databricks)

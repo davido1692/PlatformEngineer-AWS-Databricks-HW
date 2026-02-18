@@ -44,7 +44,7 @@ Top usage types:
 
 3) S3 lifecycle for raw data
    - Base: S3 TimedStorage-ByteHrs = $124.05
-   - If 30% reduction (move to IA after N days) => ~$37.22/month
+   - If 30% reduction (move to IA after 30 days) => ~$37.22/month
 
 Total estimated savings: ~$426.98/month (order of magnitude)
 
