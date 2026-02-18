@@ -1,4 +1,4 @@
-# Assignment Repository
+# PlatformEngineer-AWS+Databricks Repository
 
 This repo contains four sections: Infrastructure (Terraform), Databricks pipelines, FinOps analysis, and SQL analytics.
 
